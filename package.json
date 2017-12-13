@@ -1,0 +1,23 @@
+{
+  "name": "qafrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "handlebars": "^4.0.5",
+    "jquery": "^2.2.3",
+    "mongoose": "^4.13.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "compilePartials": "handlebars q\\&a-app/js/templates/partials/ -p -f q\\&a-app/js/templates/partials.js",
+    "compileTemplates": "handlebars q\\&a-app/js/templates/templates/ -f q\\&a-app/js/templates/templates.js",
+    "catTemplates": "cat q\\&a-app/js/templates/templates.js q\\&a-app/js/templates/partials.js > q\\&a-app/js/mt.js",
+    "h": "npm run compileTemplates && npm run compilePartials && npm run catTemplates && rm q\\&a-app/js/templates/*.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
